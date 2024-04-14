@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link} from 'react-router-dom';
 import { useState, useEffect } from "react";
 import { useHttp } from "../../hooks/http.hook.js";
 import { imgApi, skillsApi, passiveApi } from "../../config/RiotApi";
@@ -12,7 +12,6 @@ const ChampInfoPage = () => {
   const [showLoading, setShowLoading] = useState(true)
 
   const { champName } = useParams();
-  const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -62,7 +61,7 @@ const ChampInfoPage = () => {
       {!champion && !loading && !error &&
         <div className="not-found">
           <p>Champion not found</p>
-          <button onClick={() => navigate(-1)} className='btn'>Go back</button>
+          <Link to='/lolApp'><button className='btn'>Go back</button></Link>
         </div>}
     </div>
   );

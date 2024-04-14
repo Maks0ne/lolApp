@@ -69,6 +69,10 @@
       .champion-image {
         max-width: 250px;
         max-height: 300px;
+
+        @media screen and (max-width: 430px) {
+          width: 200px;
+        }
       }
 
       .champions-class-container {
