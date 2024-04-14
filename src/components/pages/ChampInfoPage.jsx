@@ -54,7 +54,7 @@ const ChampInfoPage = () => {
               <img className='skill-image' src={`${skillsApi}${champion.id}E.png`} alt="E" />
               <img className='skill-image' src={`${skillsApi}${champion.id}R.png`} alt="R" />
             </div>
-            <Link to={'..'}><button className='btn'>Go back</button></Link>
+            <Link to={'/lolApp'}><button className='btn'>Go back</button></Link>
           </div>
         </div>
       )}
