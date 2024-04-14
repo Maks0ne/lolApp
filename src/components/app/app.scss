@@ -1,0 +1,21 @@
+@import '../../style/variables.scss';
+
+.app {
+  background-image: url('../../assets/images/bgThemeBlack.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  transition: background-image 1s ease;
+
+}
+
+.light {
+  background-image: url('../../assets/images/bgThemeLight.jpg');
+}
+.dark {
+  background-image: url('../../assets/images/bgThemeBlack.jpg');
+}
+

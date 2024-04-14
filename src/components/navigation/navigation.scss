@@ -1,0 +1,62 @@
+@import '../../style/variables.scss';
+
+.navigation {
+
+  .top {
+    width: 100%;
+    position:fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 4vw;
+  }
+
+  .arrow {
+    position: fixed;
+    bottom: 8vw;
+    right: 40px;
+
+
+    &:hover {
+      animation: rotate 1s ease-in-out forwards;
+    }
+
+    @media screen and (max-width: 750px) {
+      right: 30px;
+    }
+    
+    @media screen and (max-width: 550px) {
+      right: 20px;
+    }
+
+    @media screen and (max-width: 473px) {
+      right: 15px;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    color: #f0dcb4;
+  }
+
+  button:hover {
+    box-shadow: 0 0 10px 5px rgba(219, 233, 246, 0.5);
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+
+    100% {
+      transform: scale(1.3) rotate(360deg);
+    }
+  }
+}
+
+

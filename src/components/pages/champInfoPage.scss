@@ -1,0 +1,126 @@
+@import '../../style/variables.scss';
+
+.champ-info {
+  display: flex;
+  width: 70vw;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 4%;
+  margin: 200px auto;
+  overflow: hidden;
+  animation: fadeInPage 1s ease-in;
+
+  @media screen and (max-width: 776px) {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .champ-image {
+    width: 30%;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (max-width: 1180px) {
+      margin: 0 auto;
+      width: 35%;
+    }
+
+    @media screen and (max-width: 776px) {
+      height: 400px;
+      width: auto;
+      margin-top: 30px;
+    }
+
+    @media screen and (max-width: 350px) {
+      height: 300px;
+    }
+  }
+
+  .champ-wrapper {
+    padding: 3vw 2vw;
+    text-align: center;
+
+    @media screen and (max-width: 1180px) {
+      width: 100%;
+    }
+
+    .name {
+      color: $gold-color;
+      font-size: 46px;
+
+      @media screen and (max-width: 1255px) {
+        font-size: 26px;
+      }
+    }
+
+    .title {
+      margin-top: 15px;
+      color: $gold-color;
+      font-size: 28px;
+    }
+
+    >p {
+      margin-top: 15px;
+      color: #F0E6D2;
+    }
+  }
+
+  .skill-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+    .skill-image {
+      margin-right: 2vw;
+      width: 70px;
+      height: 70px;
+
+      @media screen and (max-width: 1180px) {
+        width: 50px;
+        height: 50px;
+      }
+
+      @media screen and (max-width: 446px) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+
+
+
+  @keyframes fadeInPage {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0.7;
+    }
+  }
+}
+
+.not-found {
+  width: 20vw;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 4%;
+  margin: 150px auto;
+  font-size: 36px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.btn {
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 24px;
+  margin-top: 20px;
+  padding: 5px 5px;
+
+  &:hover {
+    text-decoration: underline;
+    transition: 0.5s ease-in-out;
+  }
+}
