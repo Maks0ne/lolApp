@@ -17,7 +17,7 @@ function App() {
         <div className='app'>
           <Navigation />
           <Routes>
-            <Route path='/lolApp' element={<ChampionsList />} />
+            <Route path='/lolApp/' element={<ChampionsList />} />
             <Route path='/champion/:champName' element={<ChampInfoPage />} />
             <Route path='*' element={<Page404 />} />
           </Routes>
