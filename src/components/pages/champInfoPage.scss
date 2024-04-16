@@ -2,7 +2,7 @@
 
 .champ-info {
   display: flex;
-  width: 70vw;
+  width: 59vw;
   background-color: black;
   opacity: 0.8;
   border-radius: 4%;
@@ -10,16 +10,31 @@
   overflow: hidden;
   animation: fadeInPage 1s ease-in;
 
+  @media screen and (max-width: 2200px) {
+    margin-top: 70px;
+  }
+
+  @media screen and (max-width: 1300px) {
+    width: 70vw;
+  }
+
+  @media screen and (max-width: 878px) {
+    width: 80vw;
+  }
+
   @media screen and (max-width: 776px) {
     flex-direction: column;
-    margin-top: 50px;
   }
 
   .champ-image {
-    width: 30%;
+    width: 45%;
     background-size: cover;
     background-position: center;
     border-radius: 5%;
+
+    @media screen and (max-width: 2200px) {
+      width: 30%;
+    }
 
     @media screen and (max-width: 1180px) {
       margin: 0 auto;
@@ -41,10 +56,6 @@
     padding: 3vw 2vw;
     text-align: center;
 
-    @media screen and (max-width: 1180px) {
-      width: 100%;
-    }
-
     .name {
       color: $gold-color;
       font-size: 46px;
@@ -57,12 +68,22 @@
     .title {
       margin-top: 15px;
       color: $gold-color;
-      font-size: 28px;
+      font-size: 36px;
+
+      @media screen and (max-width: 2200px) {
+        font-size: 28px;
+      }
     }
 
     >p {
-      margin-top: 15px;
+      margin-top: 28px;
       color: #F0E6D2;
+      padding: 0 10px;
+      font-size: 28px;
+
+      @media screen and (max-width: 2200px) {
+        font-size: 15px;
+      }
 
       @media screen and (max-width: 468px) {
         margin-top: 8px;
@@ -82,11 +103,14 @@
 
       >p {
         color: $gold-color;
-        font-size: 12px;
+        font-size: 22px;
+
+        @media screen and (max-width: 2200px) {
+          font-size: 12px;
+        }
 
         @media screen and (max-width: 446px) {
           font-size: 8px;
-
         }
       }
     }
@@ -107,9 +131,6 @@
       }
     }
   }
-
-
-
 
   @keyframes fadeInPage {
     0% {
@@ -136,9 +157,13 @@
 .btn {
   background-color: transparent;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 36px;
   margin-top: 20px;
   padding: 5px 5px;
+
+  @media screen and (max-width: 2200px) {
+    font-size: 24px;
+  }
 
   &:hover {
     text-decoration: underline;

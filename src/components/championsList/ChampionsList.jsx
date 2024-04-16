@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { useHttp } from "../../hooks/useHttp.js";
 import Spinner from "../spinner/Spinner.jsx";
 import ErrorMessage from '../errorMessage/ErrorMessage';
+import { ThemeContext } from '../../providers/ThemeProvider'
+import { ChevronsUp } from 'lucide-react'
 
 import './championList.scss'
 import { imgApi, championsListApi } from "../../config/RiotApi";
@@ -16,6 +18,7 @@ const ChampionsList = () => {
   const [offset, setOffset] = useState(20);
   const [ended, setEnded] = useState(false)
   const [showLoading, setShowLoading] = useState(true)
+  const [theme] = useContext(ThemeContext)
 
   useEffect(() => {
     fetchData();
@@ -61,6 +64,13 @@ const ChampionsList = () => {
     } else {
       setEnded(true)
     }
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 
   const getImageForChampion = (tags) => {
@@ -109,6 +119,7 @@ const ChampionsList = () => {
             </li>
           ))}
         </ul>
+        <button onClick={scrollToTop} className='arrow'>{theme === 'dark' ? <ChevronsUp color="#3e9392" /> : <ChevronsUp color="#f0dcb4" />}</button>
       </div>
       {isLoading}
       {firstLoad}

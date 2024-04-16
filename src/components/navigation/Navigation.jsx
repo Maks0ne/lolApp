@@ -2,20 +2,12 @@ import { useContext } from 'react'
 import { Moon } from 'lucide-react'
 import { Sun } from 'lucide-react';
 import { Github } from 'lucide-react'
-import { ChevronsUp } from 'lucide-react'
 import { ThemeContext } from '../../providers/ThemeProvider'
 import './navigation.scss'
 
 const Navigation = () => {
 
   const [theme, setTheme] = useContext(ThemeContext)
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
 
   const changeTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
@@ -32,7 +24,6 @@ const Navigation = () => {
 
         </a>
       </div>
-      <button onClick={scrollToTop} className='arrow'>{theme === 'dark' ? <ChevronsUp color="#3e9392" /> : <ChevronsUp color="#f0dcb4" />}</button>
     </div>
   )
 }

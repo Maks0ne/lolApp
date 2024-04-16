@@ -10,29 +10,6 @@
     padding: 2vw 4vw;
   }
 
-  .arrow {
-    position: fixed;
-    bottom: 2vw;
-    right: 40px;
-
-
-    &:hover {
-      animation: rotate 1s ease-in-out forwards;
-    }
-
-    @media screen and (max-width: 750px) {
-      right: 30px;
-    }
-    
-    @media screen and (max-width: 550px) {
-      right: 20px;
-    }
-
-    @media screen and (max-width: 473px) {
-      right: 15px;
-    }
-  }
-
   button {
     background-color: transparent;
     width: 35px;

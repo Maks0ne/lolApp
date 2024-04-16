@@ -3,7 +3,8 @@
 .champions-list {
   display: flex;
   flex-direction: column;
-margin: 0 13vw;
+  margin: 0 13vw;
+
   .logo {
     width: 17vw;
     height: auto;
@@ -160,5 +161,36 @@ margin: 0 13vw;
 
   100% {
     transform: scale(1);
+  }
+}
+.arrow {
+  position: fixed;
+  bottom: 2vw;
+  right: 40px;
+
+  background-color: transparent;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  color: #f0dcb4;
+
+  &:hover {
+    animation: rotate 1s ease-in-out forwards;
+    box-shadow: 0 0 10px 5px rgba(219, 233, 246, 0.5);
+  }
+
+  @media screen and (max-width: 750px) {
+    right: 30px;
+  }
+  
+  @media screen and (max-width: 550px) {
+    right: 20px;
+  }
+
+  @media screen and (max-width: 473px) {
+    right: 15px;
   }
 }
