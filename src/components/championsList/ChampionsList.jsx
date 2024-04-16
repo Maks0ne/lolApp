@@ -1,23 +1,21 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useHttp } from "../../hooks/http.hook.js";
+import { useHttp } from "../../hooks/useHttp.js";
 import Spinner from "../spinner/Spinner.jsx";
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import './championList.scss'
-import { imgApi } from "../../config/RiotApi";
+import { imgApi, championsListApi } from "../../config/RiotApi";
 import ImagesClass from "./ImageClass.jsx";
 import logo from '../../assets/images/LeagueOfLegendsLogo.png'
 
-
 const ChampionsList = () => {
 
-  const { fetchData, data, loading, error } = useHttp();
+  const { fetchData, data, loading, error } = useHttp(`${championsListApi}/champion.json`);
   const [champions, setChampions] = useState([]);
-  const [offset, setOffset] = useState(10);
+  const [offset, setOffset] = useState(20);
   const [ended, setEnded] = useState(false)
   const [showLoading, setShowLoading] = useState(true)
-
 
   useEffect(() => {
     fetchData();

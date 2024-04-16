@@ -19,6 +19,7 @@
     width: 30%;
     background-size: cover;
     background-position: center;
+    border-radius: 5%;
 
     @media screen and (max-width: 1180px) {
       margin: 0 auto;
@@ -62,6 +63,11 @@
     >p {
       margin-top: 15px;
       color: #F0E6D2;
+
+      @media screen and (max-width: 468px) {
+        margin-top: 8px;
+
+      }
     }
   }
 
@@ -69,11 +75,26 @@
     margin-top: 40px;
     display: flex;
     justify-content: center;
+    padding: 0 10px;
+
+    .skill-item {
+      margin-right: 2vw;
+
+      >p {
+        color: $gold-color;
+        font-size: 12px;
+
+        @media screen and (max-width: 446px) {
+          font-size: 8px;
+
+        }
+      }
+    }
 
     .skill-image {
-      margin-right: 2vw;
       width: 70px;
       height: 70px;
+      border-radius: 50%;
 
       @media screen and (max-width: 1180px) {
         width: 50px;
