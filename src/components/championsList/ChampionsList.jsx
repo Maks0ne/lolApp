@@ -5,7 +5,6 @@ import Spinner from "../spinner/Spinner.jsx";
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import { ThemeContext } from '../../providers/ThemeProvider'
 import { ChevronsUp } from 'lucide-react'
-
 import './championList.scss'
 import { imgApi, championsListApi } from "../../config/RiotApi";
 import ImagesClass from "./ImageClass.jsx";
@@ -57,10 +56,10 @@ const ChampionsList = () => {
 
     if (offset < 163) {
       setOffset(offset + 5);
-      await fetchData();
+      // await fetchData();
     } else if (offset < 165) {
       setOffset(offset + 1);
-      await fetchData();
+      // await fetchData();
     } else {
       setEnded(true)
     }
