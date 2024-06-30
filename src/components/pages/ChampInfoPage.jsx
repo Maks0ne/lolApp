@@ -42,6 +42,7 @@ const ChampInfoPage = () => {
     <div>
       {isLoading}
       {firstLoad}
+      
       {champion && (
         <div className='champ-info'>
           <img className='champ-image' src={`${imgApi}${champion.id}_0.jpg`} alt={champion.name} />
