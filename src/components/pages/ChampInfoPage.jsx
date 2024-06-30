@@ -33,7 +33,7 @@ const ChampInfoPage = () => {
       setShowLoading(false)
     }, 1000)
     return () => clearTimeout(spinnerTimeout);
-  }, [])
+  }, []);
 
   const isLoading = loading ? <Spinner /> : null
   const firstLoad = showLoading ? <Spinner /> : null
@@ -42,7 +42,7 @@ const ChampInfoPage = () => {
     <div>
       {isLoading}
       {firstLoad}
-      
+
       {champion && (
         <div className='champ-info'>
           <img className='champ-image' src={`${imgApi}${champion.id}_0.jpg`} alt={champion.name} />
