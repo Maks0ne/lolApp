@@ -14,7 +14,7 @@
 
 .light {
   background-image: url('../../assets/images/bgThemeLight.png');
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 480px) {
     background-color: #b7ae9a;
     background-image: none;
   }
@@ -23,7 +23,7 @@
 .dark {
   background-image: url('../../assets/images/bgThemeBlack.png');
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 480px) {
     background-color: #232323;
     background-image: none;
   }

@@ -86,7 +86,7 @@ const ChampionsList = () => {
     <>
       <div className="champions-list">
         <img className='logo' src={logo} alt="League of Legends" />
-        {errorMessage}:
+        {errorMessage}
 
         <ul className="champions-wrapper">
           {champions.slice(0, offset).map(champion => (
